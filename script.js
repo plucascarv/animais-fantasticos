@@ -22,6 +22,7 @@ function initTabNav() {
 }
 initTabNav();
 
+
 function initAccordion() {
   const accordionList = document.querySelectorAll(".js-accordion dt");
   const activeClass = "ativo"
@@ -41,3 +42,24 @@ function initAccordion() {
   };
 }
 initAccordion();
+
+
+function initSmoothScroll () {
+  const linksInternos = document.querySelectorAll(".js-menu a[href^='#']");
+
+  function scrollToSection(event) {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href");
+    const coord = document.querySelector(href).offsetTop;
+
+    window.scrollTo({
+      top: coord,
+      behavior: "smooth",
+    });
+  }
+
+  linksInternos.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
+}
+initSmoothScroll();

@@ -1,0 +1,1 @@
+Neste repositório armazeno o progresso do meu projeto de um site para o curso de Javascript da plataforma Origamid. A ideia é explorar diferentes funcionalidades do js em cima de uma base relativamente simples de HTML e CSS.
